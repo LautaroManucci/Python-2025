@@ -29,7 +29,7 @@ correct_answers_index = [1, 2, 0, 3, 1]
 user_points = 0
 
 # Se generan las preguntas con sus respuestas
-questions_to_ask = random.choices(list(zip(questions,answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions,answers, correct_answers_index)), k=3)
 # El usuario deberá contestar 3 preguntas
 for que, opt, ans in questions_to_ask:
     # Se muestra la pregunta y las respuestas posibles
