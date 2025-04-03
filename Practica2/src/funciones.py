@@ -22,3 +22,12 @@ def procesar_ronda(round_data, players, puntos):
     
     mvp = max(round_scores, key=round_scores.get)
     players[mvp]['mvps'] += 1
+
+def mostrar_ranking(titulo, ranking):
+    print(titulo)
+    print("Jugador   Kills  Asistencias  Muertes  MVPs  Puntos")
+    print("-"*55)
+    for player, stats in ranking:
+        print(f"{player:<11} {stats['kills']:<9} {stats['assists']:<10} {stats['deaths']:<6} {stats['mvps']:<6} {stats['points']:<6}")
+    print("-"*55)
+    print()
