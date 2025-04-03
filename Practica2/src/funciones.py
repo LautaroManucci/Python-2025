@@ -1,3 +1,6 @@
+def calcular_puntos(kills, assists, deaths, puntos):
+    return kills * puntos['kill'] + assists * puntos['assist'] + deaths * puntos['death']
+
 def procesar_ronda(round_data, players, puntos):
     round_scores = {}
     
